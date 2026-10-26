@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "subbly-fera",
+  "description": "Collect and show customer reviews with Fera: star ratings and review widgets on your product pages, review-request emails after each new customer's first order (never on renewals), and product ratings in search results. Collects your Fera public and secret API keys at install. Requires the Subbly Custom Checkout.",
+  "author": {
+    "name": "Subbly",
+    "url": "https://www.subbly.co"
+  },
+  "keywords": ["reviews", "ratings", "fera", "ugc"],
+  "extensions": {
+    "co.subbly.builder": {
+      "displayName": "Fera Reviews",
+      "setup": true,
+      "fields": [
+        {
+          "key": "STORE_PK",
+          "label": "Fera public API key (starts with pk_)",
+          "type": "text",
+          "required": true,
+          "public": true,
+          "pattern": "pk_\\S+"
+        },
+        {
+          "key": "SECRET_KEY",
+          "label": "Fera secret API key",
+          "type": "text",
+          "required": true,
+          "secret": true
+        }
+      ]
+    }
+  }
+}
