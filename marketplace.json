@@ -1,11 +1,11 @@
 {
   "$schema": "./schemas/marketplace.schema.json",
   "slug": "subbly-fera-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "plugins": [
     {
       "slug": "subbly-fera",
-      "published": false,
+      "published": true,
       "source": {
         "type": "local",
         "path": "plugins/subbly-fera"
